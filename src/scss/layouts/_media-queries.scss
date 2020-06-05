@@ -5,7 +5,6 @@
 // Small screen > 640px
 @media only screen and (min-width: 640px) {
 	@include c-form\@screen_small;
-	// @include c-flightOption\@screen_small;
 	@include l-header\@screen_small;
 	@include c-flightResult\@screen_small;
 }
@@ -16,7 +15,6 @@
 
 // Large screen (@screen-size_large)
 @media only screen and (min-width: 850px) {
-	// @include c-flightOption\@screen_large;
 }
 
 // Wide screen > 1024px

@@ -98,7 +98,7 @@ export default function (data, departureDateVal, passengersNumbers) {
 		for (let i = 0; i < allPositions.length - maxPassengersNumber; i++) {
 			allPositions[
 				Math.floor(allPositions.length * Math.random())
-			].classList.add("notAvailable");
+			].classList.add("h-notAvailable");
 		}
 
 		// losowanie cen dla klasy premium i economic
@@ -116,12 +116,12 @@ export default function (data, departureDateVal, passengersNumbers) {
 				const div = document.createElement("div");
 
 				if (
-					!e.classList.contains("available") &&
-					!e.classList.contains("notAvailable") &&
+					!e.classList.contains("h-available") &&
+					!e.classList.contains("h-notAvailable") &&
 					ticketPassengers.selectPassengersNumber <
 						ticketPassengers.passengersNumber
 				) {
-					e.classList.add("available");
+					e.classList.add("h-available");
 					div.classList.add(
 						e.getAttribute("id"),
 						"c-flightResult__position--box"
@@ -152,9 +152,9 @@ export default function (data, departureDateVal, passengersNumbers) {
 					</select>
 					</div>
 					 `;
-				} else if (e.classList.contains("available")) {
+				} else if (e.classList.contains("h-available")) {
 					ticketPassengers.selectPassengersNumber--;
-					e.classList.remove("available");
+					e.classList.remove("h-available");
 					document.querySelector(`div.${e.getAttribute("id")}`).remove();
 				}
 
@@ -168,9 +168,9 @@ export default function (data, departureDateVal, passengersNumbers) {
 							allPositions.findIndex(function (elem) {
 								if (
 									elem.id === el.className &&
-									elem.classList.contains("available")
+									elem.classList.contains("h-available")
 								) {
-									elem.classList.remove("available");
+									elem.classList.remove("h-available");
 									ticketPassengers.selectPassengersNumber--;
 									el.parentElement.remove();
 									getPriceTicket();
@@ -183,7 +183,7 @@ export default function (data, departureDateVal, passengersNumbers) {
 		});
 
 		allPositions.forEach((el) =>
-			el.classList != "notAvailable"
+			el.classList != "h-notAvailable"
 				? el.setAttribute(
 						"data-tippy-content",
 						`Price: ${el.dataset.value} Seat: ${el.id}`
