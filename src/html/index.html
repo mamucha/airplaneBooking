@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link rel="stylesheet" href="./css/style.min.css" />
+	</head>
+	<body>
+		<header class="l-header">
+			<div class="l-header__container">
+				<div class="c-logo"><img src="./images/logo-wizzair.svg" alt="logo-wizzair" /></div>
+				<nav class="c-menu"> 
+					<div class="c-menu__item"></div>
+					  <button id="c-button__login" class="c-button c-button__login">Sign in</button>
+					
+					</nav>
+				
+			</div>
+		</header>
+
+		<main>
+			<section class="l-section l-section--search">
+				<div class="l-section__container l-section__container--sreach">
+					<form class="c-formSreach">
+						<div class="c-formSreach__box">
+							<input
+								type="text"
+								id="from"
+								placeholder="From"
+								list="OriginValue"
+								required
+							/>
+							<datalist id="OriginValue">
+								<option value="Warsaw Chopin (WAW)"> </option>
+								<option value="London Heathrow (LHR)"> </option>
+								<option value="Nowy Jork John F Kennedy (JFK)"> </option>
+							</datalist>
+						</div>
+
+						<div class="c-formSreach__box">
+							<input
+								type="text"
+								id="destination"
+								placeholder="Destination"
+								list="DestinationValue"
+								required
+							/>
+							<datalist id="DestinationValue"> </datalist>
+						</div>
+
+						<div class="c-formSreach__box">
+							<input
+								type="number"
+								id="passengersNumber"
+								placeholder="Passengers"
+								name="Passengers"
+								min="1"
+								max="7"
+								required
+							/>
+						</div>
+
+						<div class="c-formSreach__box">
+							<input
+								placeholder="Date"
+								class="textbox-n"
+								type="text"
+								onfocus="(this.type='date')"
+								onblur="(this.type='text')"
+								id="departure-date"
+								required
+							/>
+						</div>
+
+						<div class="c-formSreach__btn">
+							<button class="c-button c-button__search c-button__search--clear">
+								Clear
+							</button>
+						</div>
+						<div class="c-formSreach__btn">
+							<button
+								type="submit"
+								id="c-button__search"
+								class="c-button c-button__search"
+							>
+								Search
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<section class="l-section l-section--option">
+				<div class="l-section__container l-section__container">
+					<div class="c-flightResult c-flightResult--option"></div>
+					<div class="c-back">
+						<i class="fas fa-chevron-circle-left"></i>
+					</div>
+				</div>
+			</section>
+
+			<section class="l-section l-section--result">
+				<div class="l-section__container l-section__container">
+					<div class="c-back">
+						<i class="fas fa-chevron-circle-left"></i>
+					</div>
+					<div class="c-flightResult">
+							<i class="fas fa-chevron-circle-left"></i>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<aside class="l-login"></aside>
+
+		<script
+			src="https://kit.fontawesome.com/22b5a4eeb5.js"
+			crossorigin="anonymous"
+		></script>
+		
+		<script src="js/bundle.min.js"></script>
+	</body>
+</html>

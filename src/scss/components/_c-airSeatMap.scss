@@ -1,0 +1,22 @@
+.c-airSeatMap {
+	border: 1px solid black;
+	border-radius: 8px;
+	background-color: white;
+	height: 100%;
+	overflow: auto;
+	display: grid;
+	justify-content: center;
+	grid-row: 1/2;
+
+	& rect {
+		cursor: pointer;
+	}
+}
+
+// media queries
+// screen > 1024px
+@mixin c-airSeatMap\@screen_wide {
+	.c-airSeatMap {
+		height: 650px;
+	}
+}

@@ -1,0 +1,32 @@
+.l-header {
+	background-color: #06038d;
+	opacity: 0.9;
+	z-index: 99;
+	width: 100%;
+	position: fixed;
+
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		@include size(100%, 120px);
+		@include flex(flex, center, space-between);
+		padding: rem(20px);
+
+		& img {
+			width: rem(100px);
+			cursor: pointer;
+		}
+	}
+}
+
+//media queries
+// screen > 648px
+@mixin l-header\@screen_small {
+	.l-header {
+		&__container {
+			& img {
+				width: rem(150px);
+			}
+		}
+	}
+}

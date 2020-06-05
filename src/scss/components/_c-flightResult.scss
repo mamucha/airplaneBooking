@@ -1,0 +1,131 @@
+.c-flightResult {
+	@include size(100%);
+	display: grid;
+	grid-template: 400px / 1fr;
+	gap: 20px;
+	z-index: 2;
+	padding-top: rem(80px);
+	position: relative;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+
+	&--option {
+		grid-template: 1fr / auto;
+	}
+
+	&__box {
+		border: 1px solid #000;
+		background-color: #fff;
+		padding: rem(20px);
+		border-radius: 8px;
+		box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+	}
+	&__title {
+		text-align: center;
+
+		& span {
+			padding: 0 15px;
+		}
+	}
+
+	&__text {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		margin: 20px 0;
+
+		&--description {
+			margin-bottom: 10px;
+			width: 80%;
+
+			& span {
+				font-weight: bold;
+				padding-right: 10px;
+			}
+		}
+	}
+
+	&__position {
+		display: inline-block;
+		&--box {
+			margin-bottom: rem(15px);
+			padding: rem(10px);
+			border: 1px solid black;
+			border-radius: 5px;
+			background-color: #e8eeef;
+			@include flex(flex, flex-start, center, column);
+			color: red;
+			& span {
+				padding: 0 5px;
+				font-weight: bold;
+				color: black;
+
+				&:nth-child(1) {
+					padding-left: 0;
+				}
+				svg {
+					padding-right: 2%;
+					font-size: 24px;
+					cursor: pointer;
+					transition: 0.4s all ease-in-out;
+					&:hover {
+						transform: rotate(360deg);
+					}
+				}
+			}
+
+			& div {
+				padding: 5px 20px;
+			}
+		}
+	}
+
+	&__value {
+		@include flex(flex, center, flex-start);
+		margin-bottom: rem(20px);
+		font-size: rem(24px);
+
+		& span:nth-child(1) {
+			text-decoration: underline;
+		}
+
+		&--allValue {
+			font-size: rem(34px);
+			padding-left: rem(10px);
+			font-weight: bold;
+		}
+	}
+}
+
+// media queries
+// screen > 640px
+@mixin c-flightResult\@screen_small {
+	.c-flightResult {
+		&__text {
+			grid-template-columns: repeat(2, 2fr);
+		}
+
+		&__position {
+			&--box {
+				flex-direction: row;
+				align-items: center;
+
+				& div {
+					padding: 5px;
+					@include flex_center();
+				}
+			}
+		}
+	}
+}
+
+// screen > 1024px
+@mixin c-flightResult\@screen_wide {
+	.c-flightResult {
+		grid-template: none;
+		grid-template-columns: repeat(2, 2fr);
+
+		&__box {
+			height: max-content;
+		}
+	}
+}

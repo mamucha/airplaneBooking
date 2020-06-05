@@ -1,0 +1,83 @@
+.l-login {
+	@include position($top: 50%, $left: 50%);
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	max-width: 400px;
+	margin: 0 auto;
+	@include size(90%, auto);
+	@include flex_center();
+	box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+	border-radius: rem(8px);
+
+	&__container {
+		@include flex(flex, center, center, column);
+		z-index: 99;
+		background-color: #fff;
+		padding: rem(20px);
+		border-radius: rem(8px);
+		width: 100%;
+		border: 1px solid #000;
+	}
+
+	&__form {
+		& input {
+			color: #384047;
+			background-color: #e8eeef;
+			box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+			border-radius: rem(5px);
+			padding: rem(18px);
+			margin-bottom: rem(18px);
+			@include size(100%, 50px);
+			border: 1px solid black;
+			height: 60px;
+		}
+
+		& span {
+			@include flex_center();
+			margin-top: rem(15px);
+			text-transform: uppercase;
+			cursor: pointer;
+			font-weight: bold;
+		}
+	}
+
+	&__data {
+		@include size(100%);
+		& div {
+			@include flex(flex, center, center);
+			padding-bottom: rem(15px);
+			& span {
+				@include flex(flex, center, center);
+
+				margin: 0 auto;
+				font-size: rem(24px);
+			}
+		}
+	}
+
+	&__timer {
+		@include flex(flex, center, center, column);
+		padding: rem(50px);
+		z-index: 99;
+		background-color: #fff;
+		border-radius: rem(8px);
+		box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+		border: 1px solid black;
+		& span {
+			padding-left: rem(15px);
+		}
+	}
+
+	&__order {
+		@include flex(flex, center, center, column);
+		z-index: 99;
+		background-color: #fff;
+		padding: 140px 20px 20px 20px;
+		border-radius: rem(8px);
+		box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+
+		&--title {
+			margin-bottom: rem(20px);
+		}
+	}
+}

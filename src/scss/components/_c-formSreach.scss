@@ -1,0 +1,55 @@
+.c-formSreach {
+	display: grid;
+	grid-template-columns: 1fr;
+	z-index: 2;
+	background-color: #fff;
+	padding: rem(20px);
+	border-radius: rem(8px);
+	max-width: 800px;
+	width: 100%;
+	border: 1px solid black;
+	box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+
+	&__box {
+		padding: rem(5px);
+		display: grid;
+		grid-template-rows: 2fr;
+
+		& label {
+			margin-bottom: rem(8px);
+		}
+
+		& input {
+			color: #384047;
+			background-color: #e8eeef;
+			box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+			border-radius: rem(5px);
+			padding: rem(20px);
+			@include size(100%, 50px);
+			border: 1px solid black;
+			height: rem(60px);
+		}
+	}
+
+	&__btn {
+		padding: rem(5px);
+	}
+}
+
+//media queries
+// screen > 648px
+@mixin c-form\@screen_small {
+	.c-formSreach {
+		grid-template-columns: repeat(2, 50%);
+		padding: rem(40px);
+		&__box {
+			& input {
+				margin-bottom: rem(15px);
+			}
+		}
+
+		&__btn {
+			padding: 25px 10px 10px 10px;
+		}
+	}
+}

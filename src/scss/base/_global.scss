@@ -1,0 +1,23 @@
+*,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	* {
+		box-sizing: inherit;
+	}
+}
+
+.available {
+	fill: green;
+	stroke-width: 3;
+	stroke: black;
+}
+
+.notAvailable {
+	fill: red;
+	stroke-width: 3;
+	stroke: black;
+}
