@@ -13,6 +13,7 @@ export default function () {
 		.then((response) => response.json())
 		.then((data) => {
 			const sreachOption = () => {
+				document.getElementById("DestinationValue").innerHTML = "";
 				let orginalValue = document.getElementById("from").value;
 				let optionValue = document.getElementById("DestinationValue");
 				let dataTo = [];
@@ -33,10 +34,7 @@ export default function () {
 
 			document
 				.getElementById("destination")
-				.addEventListener("click", function () {
-					document.getElementById("DestinationValue").innerHTML = "";
-					sreachOption();
-				});
+				.addEventListener("click", sreachOption);
 
 			// wyszukanie lotow po klikniecu
 			document
