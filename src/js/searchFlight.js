@@ -34,7 +34,7 @@ export default function () {
 
 			document
 				.getElementById("destination")
-				.addEventListener("click", sreachOption);
+				.addEventListener("mousedown", sreachOption);
 
 			// wyszukanie lotow po klikniecu
 			document
