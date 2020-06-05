@@ -2,7 +2,7 @@
 	@include position($top: 50%, $left: 50%);
 	transform: translate(-50%, -50%);
 	z-index: 100;
-	max-width: 400px;
+	max-width: rem(400px);
 	margin: 0 auto;
 	@include size(90%, auto);
 	@include flex_center();
@@ -29,7 +29,7 @@
 			margin-bottom: rem(18px);
 			@include size(100%, 50px);
 			border: 1px solid black;
-			height: 60px;
+			height: rem(60px);
 		}
 
 		& span {
@@ -48,7 +48,6 @@
 			padding-bottom: rem(15px);
 			& span {
 				@include flex(flex, center, center);
-
 				margin: 0 auto;
 				font-size: rem(24px);
 			}

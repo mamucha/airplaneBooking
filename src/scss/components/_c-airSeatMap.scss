@@ -1,6 +1,6 @@
 .c-airSeatMap {
 	border: 1px solid black;
-	border-radius: 8px;
+	border-radius: rem(8px);
 	background-color: white;
 	height: 100%;
 	overflow: auto;
@@ -17,6 +17,6 @@
 // screen > 1024px
 @mixin c-airSeatMap\@screen_wide {
 	.c-airSeatMap {
-		height: 650px;
+		height: rem(650px);
 	}
 }

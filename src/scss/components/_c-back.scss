@@ -3,7 +3,7 @@
 	@include position($top: 130px, $left: 0);
 	@include size(60px);
 	cursor: pointer;
-	font-size: 60px;
+	font-size: rem(60px);
 	background-color: white;
 	border-radius: 50%;
 	transition: 0.4s all ease-in-out;
