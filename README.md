@@ -4,6 +4,11 @@ Final project SAN 2019/20
 
 Page is available at: https://mamucha.github.io/airplaneBooking/
 
+**Commands:**
+- `npm i`: install package
+- `gulp`: start local server [localhost:3000](http://localhost:3000)
+
+
 More information about the project:
 
 - [BEM](#bem)
