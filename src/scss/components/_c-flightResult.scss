@@ -40,6 +40,10 @@
 			& span {
 				font-weight: bold;
 				padding-right: rem(10px);
+
+				& svg {
+					width: rem(20px) !important;
+				}
 			}
 		}
 	}
